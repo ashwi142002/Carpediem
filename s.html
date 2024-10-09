@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <style>
+        #searchBar {
+            display: none;
+            margin-top: 10px;
+        }
+        #searchLogo {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="searchLogo">🔍</div>
+    <input type="text" id="searchBar" placeholder="Search...">
+
+    <script>
+        const searchLogo = document.getElementById('searchLogo');
+        const searchBar = document.getElementById('searchBar');
+
+        searchLogo.addEventListener('click', () => {
+            searchBar.style.display = 'inline-block';
+            searchLogo.style.display = 'none';
+            searchBar.focus();
+        });
+    </script>
+
+</body>
+</html>
